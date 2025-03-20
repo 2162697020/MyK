@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		.btn-animate {
+				  position: relative;
+				  width: 130px;
+				  height: 40px;
+				  line-height: 40px;
+				  border: none;
+				  border-radius: 5px;
+				  background: #027efb;
+				  color: #fff;
+				  text-align: center;
+				}
+				
+				.btn-animate__around-2 {
+				  background: transparent;
+				  color: #027efb;
+				
+				  & > svg {
+				    position: absolute;
+				    left: 0;
+				    top: 0;
+				    width: 100%;
+				    height: 100%;
+				
+				    & > rect {
+				      stroke-width: 6px;
+				      fill: transparent;
+				      stroke: #027efb;
+				      stroke-dasharray: 85 400;
+				      stroke-dashoffset: -200%;
+				      transition: 1s all ease;
+				    }
+				  }
+				
+				  &:hover {
+				    & > svg {
+				      & > rect {
+				        stroke-dasharray: 50 0;
+				        stroke-width: 3px;
+				        stroke-dashoffset: 0;
+				        stroke: #027efb;
+				      }
+				    }
+				  }
+				}
+	</head>
+	<body>
+		<div class="btn-animate btn-animate__around-2">
+		    <svg xmlns="#">
+		        <rect height="100%" width="100%"></rect>
+		    </svg>
+		    按钮
+		</div>
+	</body>
+</html>
